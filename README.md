@@ -1,0 +1,2 @@
+# neomonitor
+XMR Mining Monitor
