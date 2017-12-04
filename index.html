@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>&#9775; Neomonitor</title>
+		<script src="config.js"></script>
+		<script src="neo.js"></script>
+		<script>
+			var times = 1;
+			refreshStats();
+		</script>
+		<meta charset="UTF-8"> 
+	</head>
+		
+	<body>
+		<div class="content">
+			<nav class="header">
+				<div class="logo">
+					<span style="color: #0088e2;">&#9775;</span> Neomonitor
+				</div>
+			</nav>
+			<div class="entry">
+				<div class="entry-title">
+					Statistics
+				</div>
+				<div id="refresh" style="color: white; padding: 10px; float: right; display: inline-block; transition: opacity 7000ms linear 0s; opacity: 0;">
+				Refreshed
+				</div>
+			</div>
+			<div>
+				<table>
+					<tr>
+						<th>Pending Balance</th>
+						<td id="balance"></td>
+					</tr>
+					<tr>
+						<th>Total Paid</th>
+						<td id="totalPaid"></td>
+					</tr>
+					<tr>
+						<th>Hashrate</th>
+						<td id="hashrate"></td>
+					</tr>
+					<tr>
+						<th>Last Share Submitted</th>
+						<td id="lastShare"></td>
+					</tr>
+					<tr>
+						<th>Total Hashes Submitted</th>
+						<td id="totalHashes"></td>
+					</tr>
+					<tr>
+						<th>Payment ID</th>
+						<td id="paymentid"></td>
+					</tr>
+				</table>
+			</div>
+			
+			<div id="workers">
+			</div>
+			<footer>
+				<div class="entry-title">
+					<a href="https://github.com/thijsvanderwoude/neomonitor" target="_blank"><span style="color: #0088e2;">&#9775;</span> Neomonitor on GitHub</a>
+				</div>
+			</footer>
+		</div>
+		<script>
+			refreshStats();
+			setInterval(refreshStats, interval);
+		</script>
+	</body>
+</html>
